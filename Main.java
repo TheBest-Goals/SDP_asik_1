@@ -1,7 +1,5 @@
 import java.sql.SQLOutput;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
@@ -11,10 +9,14 @@ public class Main {
         director.makeWelcomeEmail(objectBuilder);
         Email welcomeEmail = objectBuilder.getResult();
         System.out.println("===== WELCOME =====");
+        System.out.println(welcomeEmail);
+
+        System.out.println();
 
         EmailTextBuilder textBuilder = new EmailTextBuilder();
         director.makeWelcomeEmail(textBuilder);
         String previewText = textBuilder.getResult();
+        System.out.println("preview text:");
         System.out.println(previewText);
     }
 }
